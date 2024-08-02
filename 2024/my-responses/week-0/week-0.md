@@ -10,9 +10,18 @@ Consider the following:
 
 2. What are the principles of soundness, completeness, and zero-knowledge?
 
-   - **Soundness**: It means if the prover knows the secret, then it will be able to generate a proof that is verified to be true.
+   |                  | Prover knows witness | Prover doesn't know witness |
+   | ---------------- | -------------------- | --------------------------- |
+   | Verifier accepts | ✅                    | Non-sound                   |
+   | Verifier rejects | Non-complete         | ✅                           |
 
-   - **Completeness**: If a proof is verified to be true, then the prover must know the secret. In practical terms, if a proof is verified to be true, the prover being able to fake a proof is statistically negligible.
+   - **Non-sound**: The prover doesn't know the witness, but can generate a proof that pass the verifier.
+
+   - **Soundness**: If the prover doesn't know the witness, then it won't be able to generate a proof that pass the verifier.
+
+   - **Non-complete**: The prover knows the witness and generate a proof, but the verifier rejects it.
+
+   - **Completeness**: If a prover knows the witness and generate a proof, then the proof will pass the verifier.
 
    - **Zero-knowledge**: This means that no new knowledge is acquired by the verifier after the proof-interaction with provers. Specifically, Matthiew Green in his post says that a knowledge extractor on the verifier side couldn't extract any new knowledge from the prover.
 
@@ -88,7 +97,7 @@ In the above, the set is [0 ... 12] inclusively and the closed binary operator i
 
 The identity element is 0.
 
-The inverse of an element `i` is `12 - i`.
+The inverse of an element `i` is `13 - i`.
 
 ### Generators
 
