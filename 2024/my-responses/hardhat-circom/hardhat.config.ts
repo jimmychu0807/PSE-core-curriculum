@@ -9,9 +9,9 @@ const config: HardhatUserConfig = {
     outputBasePath: "./circuits/artifacts",
     // ptau download addr:
     // https://github.com/iden3/snarkjs
-    ptau: "https://storage.googleapis.com/zkevm/ptau/powersOfTau28_hez_final_20.ptau",
+    ptau: "https://storage.googleapis.com/zkevm/ptau/powersOfTau28_hez_final_17.ptau",
     circuits: [{
-      name: "merkletree",
+      name: "wk1/add-elliptic-curve-pts",
       protocol: "plonk",
     }]
   }
