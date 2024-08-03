@@ -1,7 +1,6 @@
 pragma circom 2.1.6;
 
-include "circomlib/poseidon.circom";
-master/circuits/bigint.circom";
+include "../../node_modules/circomlib/circuits/poseidon.circom";
 
 template PoseidonProof () {
     signal input preimage;

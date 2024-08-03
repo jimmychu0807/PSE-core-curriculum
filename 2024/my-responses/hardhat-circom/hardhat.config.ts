@@ -13,6 +13,12 @@ const config: HardhatUserConfig = {
     circuits: [{
       name: "wk1/add-elliptic-curve-pts",
       protocol: "plonk",
+    }, {
+      name: "wk1/multiply-three-numbers",
+      protocol: "plonk",
+    }, {
+      name: "wk1/poseidon-proof",
+      protocol: "plonk",
     }]
   }
 };
