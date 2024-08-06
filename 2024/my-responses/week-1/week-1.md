@@ -3,6 +3,8 @@
 - [A guide to Zero Knowledge Proofs (Part 2)](https://medium.com/@Luca_Franceschini/a-guide-to-zero-knowledge-proofs-part-2-7904dee9758d)
 - [nice intro on RSA algorithm](https://www.comparitech.com/blog/information-security/rsa-encryption/)
 
+- Download power of tau here: https://github.com/iden3/snarkjs
+
 ## Week 1 Industry Keynotes
 - zkemail
 - prove.email (ZK email)
