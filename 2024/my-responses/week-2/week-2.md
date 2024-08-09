@@ -9,3 +9,5 @@
 - Ken: introduction to zk-SNARK: https://docs.google.com/presentation/d/18b1AQM6aHxIAhvTYjFSwBdO2iv_xZQUbKZTYpTNh1ac/edit#slide=id.g2eff15ba1eb_1_0
 
 - Dankrad Feist article (very hard core, but it gets to all the details): https://dankradfeist.de/ethereum/2020/06/16/kate-polynomial-commitments.html
+
+- Why and how zk-SNARK work: https://arxiv.org/pdf/1906.07221
