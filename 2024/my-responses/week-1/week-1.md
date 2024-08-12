@@ -5,6 +5,8 @@
 - [A guide to Zero Knowledge Proofs (Part 2)](https://medium.com/@Luca_Franceschini/a-guide-to-zero-knowledge-proofs-part-2-7904dee9758d)
 - [nice intro on RSA algorithm](https://www.comparitech.com/blog/information-security/rsa-encryption/)
 - Download power of tau here: https://github.com/iden3/snarkjs
+- Vitalik: [Explore on elliptic curve pairing](https://medium.com/@VitalikButerin/exploring-elliptic-curve-pairings-c73c1864e627)
+   - skipped the last part of the pairing explanation.
 
 ## Week 1 Industry Keynotes
 - zkemail
@@ -97,7 +99,20 @@ Consider the Following:
 
    **Ans**:
 
-   Cryptographic commitments are essential in cryptography and blockchain technology as they allow for selective hiding and revealing of information. This feature ensures data privacy while still enabling verification processes. It helps achieve secure and efficient verification of transactions in blockchain protocols. Sensitive information, such as transaction details or user identities, is hidden while revealing others for the verifier to authenticate the transactions. They have two properties:
+   First, let us discuss how Pedersen Commitment works. The key is that:
+
+   - $g$ is a generator of finite cyclic group $G$: {1, g, $g^2$, $g^3$, .. $g^{q-1}$} in (mod p) finite field p.
+   - $q$ is the prime order of G: $q$ = |$G$|.
+   - pick a s, such that $h = g^s\ mod\ p$
+   - R = {0, 1, ... q-1}.
+   - Now, r $\in$ R, H(m, r) = $g^mh^r = commit$. This is the commitment function, commit().
+   - Now if the committer reveal the m, and r, verifier can verify with: verify(commit, m, r) -> bool.
+   - But what is interesting about Pedersen commitment is that it has this property:
+      $$
+      commit_1 \times commit_2 = H(m_1 + m_2, r_1 + r_2)
+      $$
+
+   Cryptographic commitments are essential in cryptography and blockchain technology as they allow for selective hiding and revealing information. This feature ensures data privacy while still enabling verification processes. It allows one to commit to a certain data while keeping its privacy and later reveal its value while binded to it, ensure the revealed value to be the same as the value committed to. It has two properties:
 
    - **Hiding**: When a user **commit** to certain data in a black box, it reveals nothing even to a computationally unbounded user.
 
