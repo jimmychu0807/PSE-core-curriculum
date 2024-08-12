@@ -1,0 +1,1 @@
+- For generating idea on hackathon: https://ethglobal.com/showcase
