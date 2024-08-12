@@ -19,11 +19,11 @@
 1. What is a proof system?
 
    <details open>
-     <summary>Answer</summary>
+     <summary><bold>Answer</bold></summary>
 
      A proof system involve a prover proving to a verifier that $f(x) = y$, that the prover know a secret value $x$ such that a public function $f$ is evaluated to $y$.
 
-     This usually involved the following proces:
+     This usually involved the following process:
 
      1. The prover commit to certain computation results and send those commitments $C$ to the verifier.
      2. The verifier will send a random value (or a group of random values) $r$ to the prover for him to compute.
@@ -42,8 +42,29 @@
 2. What is input, witness, circuit, and proof?
 
    <details open>
-     <summary>Answer</summary>
+     <summary><bold>Answer</bold></summary>
+
+     **input**: it is the input values a prover input to the proof system.
+
+     **witness**: it is a set of public and private inputs that satisfy the circuit contraints.
+
+     **circuit**: It is a set of contraint generated that the input has to satisfy.
+
+     **proof**: It is some computed value to show that the prover indeed perform certain calculations as he claimed.
 
    </details>
 
 3. How does program convert to proof?
+
+   <details open>
+     <summary><bold>Answer</bold></summary>
+
+     The process of converting a program to a proof is:
+
+     1. Convert a program to a bunch of constraints, and your input have to satisfy these constraints. like $x * x = 16$ then $x = 4$ if $x$ is an positive integer.
+
+     2. With this constraint and input number, you try to prove the constraint really satisfy. In the case of PLONK, the main part of your proof are every gate is correctly compute and every neighbor gate is consistent. You just compute it in polynomial. That's why it seems complicated.
+
+     You can apply many arithmetization techniques to convert a program to a proof. There are R1CS, Plonkish, AIR. You can also have different combination of proving scheme like Polynomial IOP and PCS that generate the proofs given the contraints.
+
+   </details>
