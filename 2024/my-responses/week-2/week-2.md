@@ -2,17 +2,26 @@
 
 - Tonardo cash src: https://github.com/tornadocash/tornado-core/tree/master
 
-- Rareskills: On how tonardo cash works: https://www.rareskills.io/post/how-does-tornado-cash-work
++ Rareskills: On how tonardo cash works: https://www.rareskills.io/post/how-does-tornado-cash-work
 
-- Koh Wei Jie: On Semaphore: https://medium.com/coinmonks/to-mixers-and-beyond-presenting-semaphore-a-privacy-gadget-built-on-ethereum-4c8b00857c9b
++ Koh Wei Jie: On Semaphore: https://medium.com/coinmonks/to-mixers-and-beyond-presenting-semaphore-a-privacy-gadget-built-on-ethereum-4c8b00857c9b
 
 - Ken: introduction to zk-SNARK: https://docs.google.com/presentation/d/18b1AQM6aHxIAhvTYjFSwBdO2iv_xZQUbKZTYpTNh1ac/edit#slide=id.g2eff15ba1eb_1_0
 
 - Dankrad Feist article (very hard core, but it gets to all the details): https://dankradfeist.de/ethereum/2020/06/16/kate-polynomial-commitments.html
 
-- On Groth16: https://www.zeroknowledgeblog.com/index.php/groth16
+## Todo
 
+- Pinocchio protocol: https://www.zeroknowledgeblog.com/index.php/the-pinocchio-protocol
+- On Groth16: https://www.zeroknowledgeblog.com/index.php/groth16
+- Vitalik on pairing (the 2nd section): https://medium.com/@VitalikButerin/exploring-elliptic-curve-pairings-c73c1864e627
+- Vitalik on STARKs
+  - part-1: https://vitalik.eth.limo/general/2017/11/09/starks_part_1.html
+  - part-2: https://vitalik.eth.limo/general/2017/11/22/starks_part_2.html
+  - part-3: https://vitalik.eth.limo/general/2018/07/21/starks_part_3.html
+- Vitalik on PLONK: https://vitalik.eth.limo/general/2019/09/22/plonk.html
 - Why and how zk-SNARK work: https://arxiv.org/pdf/1906.07221
+- Read Groth16 paper (in your pse wk2 local folder)
 
 ## Exercises
 
