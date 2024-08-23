@@ -10,6 +10,10 @@
 
 - Dankrad Feist article (very hard core, but it gets to all the details): https://dankradfeist.de/ethereum/2020/06/16/kate-polynomial-commitments.html
 
+## Sharing
+
+- [My Sharing on Tornado Cash](https://docs.google.com/presentation/d/1VjsbCafkcTc0T6ldxUE9-pMpbMsBIGGY7YnY3OaIZic/edit#slide=id.p)
+
 ## Todo
 
 - Pinocchio protocol: https://www.zeroknowledgeblog.com/index.php/the-pinocchio-protocol
