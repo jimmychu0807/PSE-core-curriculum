@@ -1,4 +1,4 @@
-pragma circom 2.1.6;
+pragma circom 2.1.8;
 
 include "../node_modules/circomlib/circuits/poseidon.circom";
 
@@ -34,4 +34,15 @@ template MerkleTreeInclusionProof(n) {
   signal output root; // note that this is an OUTPUT signal
 
   //[assignment] insert your code here to compute the root from a leaf and elements along the path
+  component hasher2[n];
+  signal nodes[n + 1];
+
+  nodes[0] <== leaf;
+  for (var i = 0; i < n; i++) {
+    hasher2[i] = Poseidon(2);
+    hasher2[i].inputs[0] <== path_index[i] * nodes[i] + (1 - path_index[i]) * path_elements[i];
+    hasher2[i].inputs[1] <== (1 - path_index[i]) * nodes[i] + path_index[i] * path_elements[i];
+    nodes[i+1] <== hasher2[i].out;
+  }
+  root <== nodes[n];
 }
