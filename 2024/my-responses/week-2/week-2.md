@@ -34,7 +34,7 @@
 
      This usually involved the following process:
 
-     1. The prover commit to certain computation results and send those commitments $C$ to the verifier.
+     1. The prover commits to certain computation results and send those commitments $C$ to the verifier.
      2. The verifier will send a random value (or a group of random values) $r$ to the prover for him to compute.
      3. The prover will compute those results of $f(r) = v$ together with proofs $\pi$ and send them over to the verifier.
      4. The verifer will verify the result is indeed y, and check that the proofs $\pi$ are consistent with the commitments $C$ sent in step 1. If it all checks out, the verifier will accept the result, otherwise the verifier will reject.
@@ -70,10 +70,8 @@
 
      The process of converting a program to a proof is:
 
-     1. Convert a program to a bunch of constraints, and your input have to satisfy these constraints. like $x * x = 16$ then $x = 4$ if $x$ is an positive integer.
+     1. Convert a program to a bunch of constraints (also called circuit), and your input have to satisfy these constraints. like $x * x = 16$ then $x = 4$ if $x$ is an positive integer. The circuits are eventually resolved into a few polynomials (like from 5 - 20) that need to be satisfied. This step is called arithmetization. There are "R1CS" way, "PLONKish" way (generating Gate and Copy constraints).
 
-     2. With this constraint and input number, you try to prove the constraint really satisfy. In the case of PLONK, the main part of your proof are every gate is correctly compute and every neighbor gate is consistent. You just compute it in polynomial. That's why it seems complicated.
-
-     You can apply many arithmetization techniques to convert a program to a proof. There are R1CS, Plonkish, AIR. You can also have different combination of proving scheme like Polynomial IOP and PCS that generate the proofs given the contraints.
+     2. Then you pick a commitment scheme. One of the most popular schemes is KZG Commitment (aka Kate commitment). This scheme is based on a "substract-and-divide" technique and ensure the quotient part is a polynomial with no remainder. The prover first send a commitment to the verifier and then a calculation result with a proof. The prover uses elliptic curve discrete log assumption to hide the input from the verifier. The verifier will perform an elliptic curve pairing at the end to verify two sides of the equation are the same.
 
    </details>
