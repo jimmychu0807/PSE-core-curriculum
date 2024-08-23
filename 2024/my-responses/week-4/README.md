@@ -2,7 +2,6 @@
 
 - [Vitalik on PLONK](https://vitalik.eth.limo/general/2019/09/22/plonk.html)
 
-
 ## TODO
 
 - Need to clarify on Groth16
