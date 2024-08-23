@@ -75,3 +75,49 @@
      2. Then you pick a commitment scheme. One of the most popular schemes is KZG Commitment (aka Kate commitment). This scheme is based on a "substract-and-divide" technique and ensure the quotient part is a polynomial with no remainder. The prover first send a commitment to the verifier and then a calculation result with a proof. The prover uses elliptic curve discrete log assumption to hide the input from the verifier. The verifier will perform an elliptic curve pairing at the end to verify two sides of the equation are the same.
 
    </details>
+
+4. Compare hashes **SHA256**, **MiMC**, **Poseidon**, and **Pedersen** in terms of gas cost, capacity, proof generation efficiency, and proof size.
+
+   <details open>
+     <summary><bold>Answer</bold></summary>
+
+     Answer comes from chatGTP 🙂
+
+     When comparing cryptographic hash functions like SHA-256, MiMC, Poseidon, and Pedersen, especially in the context of blockchain and zero-knowledge proofs (ZKPs), several factors come into play. Below is a comparative overview:
+
+     | **Feature** | **SHA-256** | **MiMC**  | **Poseidon** | **Pedersen** |
+     |-------------|-------------|-----------|--------------|--------------|
+     | **Gas Cost**| High   | Moderate to High | Low to Moderate  | Low    |
+     | **Capacity**| Fixed  | Flexible       | Flexible     | Fixed        |
+     | **Proof Generation** | Inefficient in zk-SNARKs | Efficient  | Highly Efficient in zk-SNARKs | Efficient |
+     | **Proof Size** | Large | Moderate     | Small        | Small        |
+
+     Detailed Analysis
+
+     1. SHA-256 Hash
+        - Gas Cost: Higher gas cost on Ethereum and similar platforms due to complex operations that aren't native to elliptic curve operations.
+        - Capacity: Provides a fixed-length output (256 bits).
+        - Proof Generation: Not efficient for zk-SNARKs due to its bitwise structure, which is not suitable for arithmetic circuits used in ZKP systems.
+        - Proof Size: Larger compared to specialized hash functions; not optimized for constructing concise proofs.
+
+      2. MiMC Hash
+         - Gas Cost: Generally moderate to high because it is designed for ZKP but involves several arithmetic operations.
+         - Capacity: Flexible, as it can be tailored for different circuit sizes.
+         - Proof Generation: MiMC is designed to be efficient for proof generation in zk-SNARKs by using simple arithmetic operations.
+         - Proof Size: Moderate; optimized for use in ZKP, but larger than Poseidon.
+
+      3. Poseidon Hash
+         - Gas Cost: Lower than SHA-256 and MiMC when used in zk-SNARKs because it is designed to minimize arithmetic complexity on elliptic curves.
+         - Capacity: Highly flexible, optimized for various inputs and digest lengths.
+         - Proof Generation: Highly efficient due to its algebraic structure designed for zk-SNARKs, leading to faster proof generation.
+         - Proof Size: Small; this is one of its significant advantages in proof systems like zk-SNARKs.
+
+      4. Pedersen Hash
+         - Gas Cost: Typically low in platforms that natively support elliptic curve operations since it leverages group operations.
+         - Capacity: Fixed, determined by the elliptic curve used.
+         - Proof Generation: Efficient due to its use of linear operations which translate well to zk-proofs.
+         - Proof Size: Small, as it benefits from elliptic curve mathematics that are succinct and efficient.
+
+      In summary, Poseidon hash and Pedersen hash are widely popular choices within zk-SNARK applications.
+
+   </details>
