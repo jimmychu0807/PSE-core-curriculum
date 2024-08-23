@@ -1,6 +1,7 @@
 pragma circom 2.1.8;
 
 include "../node_modules/circomlib/circuits/poseidon.circom";
+include "../node_modules/circomlib/circuits/mux1.circom";
 
 template CheckRoot(n) { // compute the root of a MerkleTree of n Levels 
   signal input leaves[2**n];
@@ -34,14 +35,19 @@ template MerkleTreeInclusionProof(n) {
   signal output root; // note that this is an OUTPUT signal
 
   //[assignment] insert your code here to compute the root from a leaf and elements along the path
-  component hasher2[n];
   signal nodes[n + 1];
+  component hasher2[n];
+  component muxes[n];
 
   nodes[0] <== leaf;
   for (var i = 0; i < n; i++) {
     hasher2[i] = Poseidon(2);
-    hasher2[i].inputs[0] <== path_index[i] * nodes[i] + (1 - path_index[i]) * path_elements[i];
-    hasher2[i].inputs[1] <== (1 - path_index[i]) * nodes[i] + path_index[i] * path_elements[i];
+    muxes[i] = Mux1();
+    muxes[i].c[0] <== path_elements[i];
+    muxes[i].c[1] <== nodes[i];
+    muxes[i].s <== path_index[i];
+    hasher2[i].inputs[0] <== muxes[i].out;
+    hasher2[i].inputs[1] <== nodes[i] + path_elements[i] - muxes[i].out;
     nodes[i+1] <== hasher2[i].out;
   }
   root <== nodes[n];
