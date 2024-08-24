@@ -59,11 +59,12 @@ contract MerkleTree is Groth16Verifier {
   }
 
   function verify(
-    uint[2] memory a,
-    uint[2][2] memory b,
-    uint[2] memory c,
-    uint[1] memory input
+    uint[2] calldata a,
+    uint[2][2] calldata b,
+    uint[2] calldata c,
+    uint[1] calldata input
   ) public view returns (bool) {
     // [assignment] verify an inclusion proof and check that the proof root matches current root
+    return verifyProof(a, b, c, input);
   }
 }
