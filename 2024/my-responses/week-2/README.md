@@ -125,3 +125,29 @@
       In summary, Poseidon hash and Pedersen hash are widely popular choices within zk-SNARK applications.
 
    </details>
+
+5. How is Tornado Cash Nova different from Tornado Cash Classic? What are the key upgrades/improvements and what changes in the technical design make these possible?
+
+   <details open>
+     <summary><bold>Answer</bold></summary>
+
+     Tornado Cash Nova represents a series of improvements over Tornado Cash Classic with significant upgrades in its design and features. Here are the key differences and enhancements:
+
+     1. Layer 2 Operations and Cost Efficiency: Tornado Cash Nova operates on the Gnosis Chain (previously known as the xDai Chain), functioning as a Layer 2 solution. This transition optimizes speed and reduces transaction costs compared to the Classic version, which operates on the Ethereum mainnet2.
+
+     2. Arbitrary Amounts and Shielded Transfers: Unlike Tornado Cash Classic, which limits users to mixing fixed denominations of tokens, Tornado Cash Nova allows for deposits and withdrawals of any amount. This feature provides more flexibility and privacy in handling funds, as transactions are less predictable and more concealed via shielded transfers3.
+
+     These improvements in Tornado Cash Nova are primarily due to its operation on a more scalable and cost-effective chain, along with enhanced privacy mechanisms that shield transaction amounts and patterns.
+
+   </details>
+
+6. What is the role of the relayers in the Tornado Cash protocols? Why are relayers needed?
+
+   <details open>
+     <summary><bold>Answer</bold></summary>
+
+     Relayers is to pay for transaction fee on behalf of the receiving-end of the wallet. This is because usually users will use a totally new account to receive the funding in order to increase privacy. But to interact with Tornado Cash and retrieve money out from the pool requires the account to be seeded with some initial deposit first. So someone has to send this new account some money in the first hand and this defeats the anonymity.
+
+     The relayer is to pay the gas fee on behalf of this receiving account so it doesn't need to be seeded.
+
+   </details>
