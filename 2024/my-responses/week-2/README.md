@@ -27,7 +27,7 @@
 - Why and how zk-SNARK work: https://arxiv.org/pdf/1906.07221
 - Read Groth16 paper (in your pse wk2 local folder)
 
-## Exercises
+## Exercises - Inside Markdown Doc
 
 1. What is a proof system?
 
@@ -80,7 +80,9 @@
 
    </details>
 
-4. Compare hashes **SHA256**, **MiMC**, **Poseidon**, and **Pedersen** in terms of gas cost, capacity, proof generation efficiency, and proof size.
+## Exercises - Part 1 Hashes and Merkle Tree
+
+1. Compare hashes **SHA256**, **MiMC**, **Poseidon**, and **Pedersen** in terms of gas cost, capacity, proof generation efficiency, and proof size.
 
    <details open>
      <summary><bold>Answer</bold></summary>
@@ -126,7 +128,9 @@
 
    </details>
 
-5. How is Tornado Cash Nova different from Tornado Cash Classic? What are the key upgrades/improvements and what changes in the technical design make these possible?
+## Exercise - Part 2 Tornado Cash
+
+1. How is Tornado Cash Nova different from Tornado Cash Classic? What are the key upgrades/improvements and what changes in the technical design make these possible?
 
    <details open>
      <summary><bold>Answer</bold></summary>
@@ -141,7 +145,7 @@
 
    </details>
 
-6. What is the role of the relayers in the Tornado Cash protocols? Why are relayers needed?
+2. What is the role of the relayers in the Tornado Cash protocols? Why are relayers needed?
 
    <details open>
      <summary><bold>Answer</bold></summary>
@@ -151,3 +155,7 @@
      The relayer is to pay the gas fee on behalf of this receiving account so it doesn't need to be seeded.
 
    </details>
+
+3. Running the test of tornado-nova repo
+
+   ![Test Result](./assets/test-completed.png)

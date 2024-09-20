@@ -72,8 +72,75 @@ describe('Custom Tests', function () {
     return { tornadoPool, token, proxy, omniBridge, amb, gov, multisig }
   }
 
-  it('[assignment] ii. deposit 0.1 ETH in L1 -> withdraw 0.08 ETH in L2 -> assert balances', async () => {
-      // [assignment] complete code here
+  // In test/custom.test.js, write a test that: Alice deposits 0.1 ETH in L1 -> Alice withdraws 0.08 ETH in L2 -> assert recipient, omniBridge, and tornadoPool balances are correct.
+  it.only('[assignment] ii. deposit 0.1 ETH in L1 -> withdraw 0.08 ETH in L2 -> assert balances', async () => {
+    // [assignment] complete code here
+    const DEPOSIT = 0.1;
+    const WITHDRAWAL = 0.08;
+    const REMAINING = 0.02;
+
+    const { tornadoPool, token, omniBridge } = await loadFixture(fixture);
+    const aliceKeypair = new Keypair();
+
+    const aliceDepositAmount = utils.parseEther(DEPOSIT.toString());
+    const aliceDepositUtxo = new Utxo({ amount: aliceDepositAmount, keypair: aliceKeypair });
+    const { args, extData } = await prepareTransaction({
+      tornadoPool,
+      outputs: [aliceDepositUtxo],
+    });
+
+    const onTokenBridgedData = encodeDataForBridge({ proof: args, extData });
+    const onTokenBridgedTx = await tornadoPool.populateTransaction.onTokenBridged(
+      token.address,
+      aliceDepositUtxo.amount,
+      onTokenBridgedData,
+    );
+
+    await token.transfer(omniBridge.address, aliceDepositAmount);
+    const transferTx = await token.populateTransaction.transfer(tornadoPool.address, aliceDepositAmount)
+
+    await omniBridge.execute([
+      { who: token.address, callData: transferTx.data },
+      { who: tornadoPool.address, callData: onTokenBridgedTx.data },
+    ]);
+
+
+
+    const omniBridgeBalance1 = await token.balanceOf(omniBridge.address);
+    console.log("omniBridgeBalance before:", omniBridgeBalance1.toString());
+
+
+
+    const withdrawAmount = utils.parseEther(WITHDRAWAL.toString());
+    const bobEthAddress = '0xDeaD00000000000000000000000000000000BEEf'
+    const aliceChangeUtxo = new Utxo({
+      amount: aliceDepositAmount.sub(withdrawAmount),
+      keypair: aliceKeypair,
+    });
+
+    await transaction({
+      tornadoPool,
+      inputs: [aliceDepositUtxo],
+      outputs: [aliceChangeUtxo],
+      recipient: bobEthAddress,
+      isL1Withdrawal: false,
+    })
+
+    // Test Bob balance
+    const bobBalance = await token.balanceOf(bobEthAddress)
+    expect(bobBalance).to.be.equal(withdrawAmount)
+
+    // Test the omnibridge balance
+    const remainingAmount = utils.parseEther(REMAINING.toString());
+    const omniBridgeBalance = await token.balanceOf(omniBridge.address);
+
+    console.log("omniBridgeBalance:", omniBridgeBalance.toString());
+    console.log("remainingAmount:", remainingAmount.toString());
+
+    expect(omniBridgeBalance).to.be.equal(remainingAmount);
+
+    // Test the Tornado Pool balance
+    // const aliceBalance = await token.balanceOf(bobEthAddress)
   })
 
   it('[assignment] iii. see assignment doc for details', async () => {
