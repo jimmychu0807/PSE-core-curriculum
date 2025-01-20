@@ -75,3 +75,7 @@ Have a look at the following:
 - [Technical explanatory blog post](https://blog.aayushg.com/zkemail/)
 - [Github Organization](https://github.com/zkemail)
 - [Main Website](https://prove.email/)
+
+## Zupass
+
+- https://github.com/proofcarryingdata/zupass
