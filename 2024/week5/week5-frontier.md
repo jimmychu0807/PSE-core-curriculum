@@ -37,7 +37,9 @@ The properties of FHE are quite interesting, even though much work still needs t
 - [Zero to Start: Applied Fully Homomorphic Encryption (FHE) Part 1](https://mirror.xyz/privacy-scaling-explorations.eth/D8UHFW1t48x2liWb5wuP6LDdCRbgUH_8vOFvA0tNDJA)
 - [Zero to Start: Applied Fully Homomorphic Encryption (FHE) Part 2](https://mirror.xyz/privacy-scaling-explorations.eth/wQZqa9acMdGS7LTXmKX-fR05VHfkgFf9Wrjso7XxDzs)
 
-After you are done reading that, please go through the following:
+### Indistinguishable Obfuscation
+
+### Quantum Computing: One-shot Signature
 
 #### Tutorials and Examples
 - **[Zama FHE Tutorials](https://github.com/zama-ai/awesome-zama?tab=readme-ov-file#tutorials)**: A list of Fully Homomorphic Encryption (FHE) resources created by Zama.
