@@ -63,7 +63,7 @@ The process of converting a program to a proof is:
 You can apply many arithmetization techniques to convert a program to a proof. There are R1CS, Plonkish, AIR. You can also have different combination of proving scheme like Polynomial IOP and PCS in below diagram.
 
 ![Program to Proof](./assets/program-to-proof.png)
-[Source](https://zk-learning.org/assets/lecture12.pdf)
+[Source](https://rdi.berkeley.edu/zk-learning/assets/lecture14.pdf)
 
 There're really a lot of combinations like below taxonomy shows, but you don't need to know all of them at the moment.
 ![Taxonomy](./assets/taxonomy.png)
@@ -79,6 +79,17 @@ Groth16 is one of the famous zkSNARKs. Just remember that its biggest advantage 
 STARKs are a type of zero-knowledge proof system that is post-quantum secure. It usually involves larger proof size and faster proof size. There are two articles written by Vitalik that explain STARKs in detail. You can read them here:
 1. https://vitalik.eth.limo/general/2017/11/09/starks_part_1.html
 2. https://vitalik.eth.limo/general/2017/11/22/starks_part_2.html
+3. **Optional article**: https://vitalik.eth.limo/general/2018/07/21/starks_part_3.html
+
+
+####  Optional Resources (For Deepening Your Understanding)
+
+- **[Stark Anatomy](https://aszepieniec.github.io/stark-anatomy/)**  
+  This six-part tutorial series dives into the mechanics of the STARK proof system. It’s designed for a technically-inclined audience with a basic understanding of mathematics and programming.
+
+- **[Exploring Circle STARKs](https://vitalik.eth.limo/general/2024/07/23/circlestarks.html)**  
+  An introduction to Circle STARKs, an optimization that enhances the efficiency and scalability of STARK proofs using structured polynomial commitments.
+
 
 # 💪 Exercises
 
