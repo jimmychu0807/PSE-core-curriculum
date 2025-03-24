@@ -23,7 +23,7 @@ Read this article for an introduction:
 - [KZG Commitments by Inevitable Ethereum](https://www.inevitableeth.com/home/concepts/kzg-commitment)
 
 Read this article for a more in-depth mathematical look into how it works (optional):
-- [KZG polynomial commitments by Dankrad Feist](https://dankradfeist.de/ethereum/2020/06/16/kate-polynomial-commitments.html)
+- [**KZG polynomial commitments by Dankrad Feist**](https://dankradfeist.de/ethereum/2020/06/16/kate-polynomial-commitments.html) (read)
 
 If you prefer to read some code, check out this article:
 - [Explaining KZG Commitment with Code Walkthrough by Kai Jun Eer](https://kaijuneer.medium.com/explaining-kzg-commitment-with-code-walkthrough-216638a620c9)
@@ -82,7 +82,7 @@ STARKs are a type of zero-knowledge proof system that is post-quantum secure. It
 3. **Optional article**: https://vitalik.eth.limo/general/2018/07/21/starks_part_3.html
 
 
-####  Optional Resources (For Deepening Your Understanding)
+#### Optional Resources (For Deepening Your Understanding)
 
 - **[Stark Anatomy](https://aszepieniec.github.io/stark-anatomy/)**  
   This six-part tutorial series dives into the mechanics of the STARK proof system. It’s designed for a technically-inclined audience with a basic understanding of mathematics and programming.
@@ -90,6 +90,8 @@ STARKs are a type of zero-knowledge proof system that is post-quantum secure. It
 - **[Exploring Circle STARKs](https://vitalik.eth.limo/general/2024/07/23/circlestarks.html)**  
   An introduction to Circle STARKs, an optimization that enhances the efficiency and scalability of STARK proofs using structured polynomial commitments.
 
+- [S2M7: FRI and Proximity Proofs (Part.1) Dan Boneh](https://www.youtube.com/watch?v=MBDBrEr2XQg)
+- [S2M8: FRI and Proximity Proofs (Part.2)](https://www.youtube.com/watch?v=CWbx_rnj7LI)
 
 # 💪 Exercises
 
