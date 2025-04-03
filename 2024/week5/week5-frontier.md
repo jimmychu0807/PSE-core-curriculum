@@ -4,11 +4,9 @@ In this final week of the curriculum, we are going to take a more self-explorato
 
 First, we will dive into some basics about MPC/FHE. Then we will look at some interesting tools and primitives like TLSNotary and ZKEmail. Keep in mind that the topics in this module continue to evolve at a rapid pace. We will only be able to touch on some basic concepts and the rest will be for you to explore.
 
-## MPC/FHE
-
 Zero-knowledge proofs (ZKPs), Multi-Party Computation (MPC), and Fully Homomorphic Encryption (FHE) are all areas of research that have significant overlap with each other. So far, you have mostly focused on ZKPs, but learning about MPC/FHE will allow you to see things from a new perspective.
 
-### Multi-Party Computation (MPC)
+## Multi-Party Computation (MPC)
 
 [Secure Multi-Party Computation](https://en.wikipedia.org/wiki/Secure_multi-party_computation) or MPC for short, is a protocol that allows multiple entities to jointly compute a function without revealing their individual inputs.
 
@@ -28,7 +26,7 @@ When you are done, feel free to browse these (optional) additional resources at 
 - [An Introduction to Secret-Sharing-Based Secure Multiparty Computation ](https://eprint.iacr.org/2022/062.pdf)
 - [A Pragmatic Introduction to Secure Multi-Party Computation](https://securecomputation.org/docs/pragmaticmpc.pdf)
 
-### Fully Homomorphic Encryption (FHE)
+## Fully Homomorphic Encryption (FHE)
 
 Another fascinating and growing area of research is the concept of [Fully Homomorphic Encryption (FHE)](https://en.wikipedia.org/wiki/Homomorphic_encryption#Fully_homomorphic_encryption). Technically, FHE as a concept is a subset of homomorphic hidings (the Wikipedia article linked above reflects this).
 
@@ -37,27 +35,30 @@ The properties of FHE are quite interesting, even though much work still needs t
 - [Zero to Start: Applied Fully Homomorphic Encryption (FHE) Part 1](https://mirror.xyz/privacy-scaling-explorations.eth/D8UHFW1t48x2liWb5wuP6LDdCRbgUH_8vOFvA0tNDJA)
 - [Zero to Start: Applied Fully Homomorphic Encryption (FHE) Part 2](https://mirror.xyz/privacy-scaling-explorations.eth/wQZqa9acMdGS7LTXmKX-fR05VHfkgFf9Wrjso7XxDzs)
 
-### Indistinguishable Obfuscation
-
-- the state of the art IO paper:
-  https://eprint.iacr.org/2020/1003
-
-### Quantum Computing: One-shot Signature
-
-#### Tutorials and Examples
+### Tutorials and Examples
 - **[Zama FHE Tutorials](https://github.com/zama-ai/awesome-zama?tab=readme-ov-file#tutorials)**: A list of Fully Homomorphic Encryption (FHE) resources created by Zama.
 - **[Homomorphic Encryption Example](https://github.com/homenc/HElib/tree/master/examples)**: Example codes using the HElib library. HElib is an open-source software library that implements homomorphic encryption.
 - **[Microsoft SEAL Examples](https://github.com/Microsoft/SEAL/tree/main/native/examples)**: Example codes and tutorials for Microsoft SEAL. Microsoft SEAL is an easy-to-use and powerful homomorphic encryption library.
 
-#### Key Papers and Articles
+### Key Papers and Articles
 - **[Gentry's Original Paper on FHE](https://eprint.iacr.org/2009/616.pdf)**: The foundational paper by Craig Gentry that introduced the first practical FHE scheme.
 - **[Homomorphic Encryption Standardization](https://homomorphicencryption.org/standard)**: Ongoing efforts and papers aimed at standardizing homomorphic encryption schemes.
 - **[Jeremy Kun's Overview on FHE](https://www.jeremykun.com/2024/05/04/fhe-overview/)**: A detailed blog post that provides an excellent overview of FHE concepts and advancements.
-#### Current Research
+
+### Current Research
 - **[FHE.org Community](https://fhe.org)**: A hub for researchers and developers working on advancing FHE and other secure computation techniques.
 - **[TII Survey on FHE](https://eprint.iacr.org/2022/1602.pdf)**: A comprehensive survey paper that provides an in-depth overview of the current state of FHE research.
 
-## TLSNotary
+## Indistinguishable Obfuscation
+
+- the state of the art IO paper:
+  https://eprint.iacr.org/2020/1003
+
+## Quantum Computing: One-shot Signature
+
+## Applications
+
+### TLSNotary
 
 [TLSNotary](https://tlsnotary.org/) is a protocol that allows you to prove to a third party that you have received certain data from a web server, without allowing the third party to see the data itself. This is particularly useful for verifying the authenticity of the data you’ve received, such as bank statements or signed documents, without exposing sensitive information.
 It enables a client to prove data provenance—that data was honestly obtained from a specific server—while preserving privacy through Multi-Party Computation (MPC), without revealing the actual content to third parties or relying on a single trusted intermediary.
@@ -70,7 +71,7 @@ We also encourage you to take a look at the following:
 - [GitHub Organization](https://github.com/tlsnotary)
 - [Main Website](https://tlsnotary.org/)
 
-## ZKEmail
+### ZKEmail
 
 The [ZKEmail](https://github.com/zkemail) project is a fascinating application of Zero-Knowledge Proofs with traditional protocols (like emails and DKIM). A simple intersection of new and old technologies allow for fascinating new use-cases like treating emails as a wallet or even a peer-to-peer network of transfer.
 
@@ -83,6 +84,6 @@ Have a look at the following:
 - [Github Organization](https://github.com/zkemail)
 - [Main Website](https://prove.email/)
 
-## Zupass
+### Zupass
 
 - https://github.com/proofcarryingdata/zupass

@@ -17,3 +17,9 @@
 
 Four golden lessons: https://www.nature.com/articles/426389a
 
+## Survey on PSE MPC framework
+
+- check [MPC framework](https://mpc.pse.dev/)
+- It depends on garbled circuit impl [emp-wasm-backend](https://github.com/voltrevo/emp-wasm-backend)
+- here is using the [garbled circuit](https://github.com/voltrevo/emp-wasm-backend/blob/main/src/EmpCircuit.ts), that depends on [emp-wasm](https://github.com/voltrevo/emp-wasm)
+- garbled circuit YT explanation: https://www.youtube.com/watch?v=FMZ-HARN0gI
