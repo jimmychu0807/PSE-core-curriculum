@@ -87,3 +87,11 @@ Have a look at the following:
 ### Zupass
 
 - https://github.com/proofcarryingdata/zupass
+
+### Zama
+
+- [Zama FHE master plan](https://www.zama.ai/post/zama-fhe-master-plan)
+  Zama has raised $73 million in a Series A
+
+- fhEVM architecture
+  ![architecture](./assets/zama/fhevm-archit.avif)
