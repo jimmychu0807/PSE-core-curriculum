@@ -95,3 +95,22 @@ Have a look at the following:
 
 - fhEVM architecture
   ![architecture](./assets/zama/fhevm-archit.avif)
+
+Core components
+- [TFHE-rs](https://github.com/zama-ai/tfhe-rs)
+  - Utilize GPU
+- fhEVM/httpz
+  - the [solidity library](https://github.com/zama-ai/httpz-contracts)
+  - a [fhevm co-processor](https://github.com/zama-ai/httpz-backend)
+  - and a gateway and Key Management system
+
+- There is a bounty program, and this one is looking to build a [dApp](https://github.com/zama-ai/bounty-program/issues/144) wtih fhEVM library.
+
+### Quantum computer
+
+- it is much faster, can process pretty much in parallel
+- a few qubits can hold a lot more info than traditional computer bits
+- It is much faster to run shor algorithm on quantum computer and find the prime factor of a large number.
+- ref:
+  - video 1: https://www.youtube.com/watch?v=lvTqbM5Dq4Q
+  - video 2: https://www.youtube.com/watch?v=jHoEjvuPoB8
