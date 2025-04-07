@@ -5,6 +5,8 @@
 
 Four golden lessons: https://www.nature.com/articles/426389a
 
+- overall [programmable cryptography industry map](./assets/pc-marketmap.pdf)
+
 ## MPC
 
 - related to the shamir secret sharing algorithm?
@@ -25,13 +27,13 @@ Four golden lessons: https://www.nature.com/articles/426389a
 
 ## Zama
 
-- [Zama FHE master plan](https://www.zama.ai/post/zama-fhe-master-plan)
-  Zama has raised $73 million in a Series A
+- [Zama FHE master plan](https://www.zama.ai/post/zama-fhe-master-plan). Zama has raised $73 million in a Series A in Mar 2025.
 
 - fhEVM architecture
   ![architecture](./assets/zama/fhevm-archit.avif)
 
-Core components
+### Core components
+
 - [TFHE-rs](https://github.com/zama-ai/tfhe-rs)
   - Utilize GPU
 - fhEVM/httpz
@@ -40,6 +42,12 @@ Core components
   - and a gateway and Key Management system
 
 - There is a bounty program, and this one is looking to build a [dApp](https://github.com/zama-ai/bounty-program/issues/144) wtih fhEVM library.
+
+### Key papers/blogposts
+
+- The 4-part series [TFHE Deep Dive](https://docs.zama.ai/tfhe-rs/explanations/tfhe-deep-dive)
+- [TFHE-rs handbook](./assets/zama/tfhe-rs-handbook.pdf)
+- [fhevm whitepaper v2](./assets/zama/fhevm-whitepaper-v2.pdf)
 
 ## Quantum Computing
 
