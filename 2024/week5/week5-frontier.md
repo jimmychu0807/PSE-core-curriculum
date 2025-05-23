@@ -6,6 +6,15 @@ First, we will dive into some basics about MPC/FHE. Then we will look at some in
 
 Zero-knowledge proofs (ZKPs), Multi-Party Computation (MPC), and Fully Homomorphic Encryption (FHE) are all areas of research that have significant overlap with each other. So far, you have mostly focused on ZKPs, but learning about MPC/FHE will allow you to see things from a new perspective.
 
+## zkVM
+
+### RiscZero
+
+- doc: https://dev.risczero.com/api/zkvm
+- there is a concept of host and guest. The guest code is executed in a zkVM and only a limited set of operations can be carry out. In contrast, the host has a freer env.
+- There is a `journal` type publishing data out.
+- The guest program will output a receipt, ie: **(result, proof)**.
+
 ## Multi-Party Computation (MPC)
 
 [Secure Multi-Party Computation](https://en.wikipedia.org/wiki/Secure_multi-party_computation) or MPC for short, is a protocol that allows multiple entities to jointly compute a function without revealing their individual inputs.
