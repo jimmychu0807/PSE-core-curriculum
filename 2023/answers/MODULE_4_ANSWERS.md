@@ -83,7 +83,7 @@
 
 1. **What are the advantages of PLONK over Groth16?**
 
-   - Answer: PLONK offers a "universal and updateable" trusted setup, eliminating the need for a new trusted setup for every circuit. This makes it more versatile and reduces the security concerns associated with multiple setup phases. Additionally, PLONK is designed to be more modular and flexible, allowing for easier integration with various cryptographic primitives.
+   - Answer: PLONK offers a "universal and updatable" trusted setup, eliminating the need for a new trusted setup for every circuit. This makes it more versatile and reduces the security concerns associated with multiple setup phases. Additionally, PLONK is designed to be more modular and flexible, allowing for easier integration with various cryptographic primitives.
 
 2. **How does PLONK eliminate the need for a new trusted setup for every circuit?**
 

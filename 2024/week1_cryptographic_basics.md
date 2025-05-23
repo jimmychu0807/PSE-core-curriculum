@@ -7,7 +7,7 @@ In each of our modules, we will have a practical component so that you can get s
 ### Getting Started with Circom
 
 #### Understanding how a Circom circuit integrates to a system or application
-Let's see the workflow to have an overview of how a Circom circuit integrates to an App project:
+Let's see the workflow to have an overview of how a Circom circuit integrates into an App project:
 ```mermaid
 sequenceDiagram
     participant Developer
