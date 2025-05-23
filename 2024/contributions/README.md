@@ -405,7 +405,7 @@ Zk-mercadopago
 Create a circom circuit that proves a transaction over mercadopago payment system
 
 **GitHub Link:**
-[https://github.com/yagopajarino/zk-email-minimal](https://github.com/yagopajarino/zk-email-minimal)
+[https://github.com/zkemail/zk-email-verify](https://github.com/zkemail/zk-email-verify)
 
 ---
 

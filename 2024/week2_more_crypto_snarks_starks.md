@@ -36,7 +36,7 @@ Trusted setup is a process to generate a bunch of different points on elliptic c
 
 STARKs and SNARKs are two types of zero-knowledge proofs system. The proof system requires witness, initial statement, circuit. We'll explain them in the next section. Normally the proof generated is a bunch of byte and it's a few mathematic objects. The proof can be verified by the verifier by running some verification functions on these mathematic objects.
 
-zkSTARK and zkSNARK are in fact adjectives. They describe the type of proof system. It doesn't necessarily need to be zk. You don't need to know the detail of how they work at the moment, but you need to know they are adjective to describe the proof system and when we say Blah Blah is a zkSNARKs, it means it's a proof system that requires a prover and a verifier, and the prover can prove something to the verifier without revealing the information.
+zkSTARK and zkSNARK are in fact adjectives. They describe the type of proof system. It doesn't necessarily need to be zk. You don't need to know the detail of how they work at the moment, but you need to know they are adjective to describe the proof system and when we say Blah is a zkSNARKs, it means it's a proof system that requires a prover and a verifier, and the prover can prove something to the verifier without revealing the information.
 
 1. Zero-Knowledge: Verifier cannot know what is verified except true/false.
 2. Succinct: Proof needs to be short and can be verified quickly.

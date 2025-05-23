@@ -19,7 +19,7 @@ Zero-knowledge proofs (ZKPs), Multi-Party Computation (MPC), and Fully Homomorph
 
 [Secure Multi-Party Computation](https://en.wikipedia.org/wiki/Secure_multi-party_computation) or MPC for short, is a protocol that allows multiple entities to jointly compute a function without revealing their individual inputs.
 
-The classic example of MPC is the [Yao's Millionaire Problem](https://en.wikipedia.org/wiki/Yao%27s_Millionaires%27_problem). This is a thought experiment in which two millionaires are interested in knowing which of them is richer without revealing their actual wealth.
+The classic example of MPC is the [Yao's Millionaires' Problem](https://en.wikipedia.org/wiki/Yao%27s_Millionaires%27_problem). This is a thought experiment in which two millionaires are interested in knowing which of them is richer without revealing their actual wealth.
 
 MPC is also used to generate the secret value and the Common Reference String (CRS) for a trusted setup in a distributed manner, where multiple parties collaborate to generate the parameters without any single party having access to the entire secret value.
 
@@ -76,7 +76,7 @@ For a brief overview, watch this video: [Verify Private Data with TLSNotary Plug
 
 We also encourage you to take a look at the following:
 
-- [Explanatory Blog Post](https://pluto.xyz/blog/how-tlsnotary-works)
+- [Explanatory Blog Post](https://pluto.xyz/blog/web-proof-techniques-mpc-mode)
 - [GitHub Organization](https://github.com/tlsnotary)
 - [Main Website](https://tlsnotary.org/)
 
