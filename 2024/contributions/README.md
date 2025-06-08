@@ -1019,7 +1019,7 @@ Library of Automatic Difference that written in Starknet's programming language 
 - Cairo
 
 **Project Goals:**
-Create greate analysis library in zk ecosystem
+Create great analysis library in zk ecosystem
 
 **GitHub Link:**
 [https://github.com/rexumm/zkAnalysisLibrary](https://github.com/rexumm/zkAnalysisLibrary)
